@@ -1,0 +1,77 @@
+
+public class Persona {
+    private String nombre;
+    private String apellido;
+    private LocalDate nacimiento;
+    private HashMap<LocalDate, Double>peso;
+    private HashMap<LocalDate, Double>altura;
+    
+    public Persona(String nombre, String apellido, LocalDate nacimiento, HashMap<LocalDate, Double>peso, HashMap<LocalDate, Double>altura) {
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.nacimiento=nacimiento;
+        this.peso=peso;
+        this.altura=altura;
+    }
+    
+    public Persona() {
+        this.nombre="Antonio";
+        this.apellido="Banderas";
+        this.nacimiento=LocalDate.of(1995,05,04);
+        this.peso= new HashMap <LocalDate, Double>();
+        this.altura= new HashMap <LocalDate, Double>();
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getApellido() {
+        return apellido;
+    }
+    public LocalDate getNacimiento() {
+        return nacimiento;
+    }
+    public HashMap<LocalDate, Double> getPeso() {
+        return peso;
+    }
+    public HashMap<LocalDate, Double> getAltura() {
+        return altura;
+    }
+    public void setNombre(String nombre) {
+        this.nombre=nombre;
+    }
+    public void setApellido (String apellido){
+        this.apellido=apellido;
+    }
+    public void setNacimiento (LocalDate nacimiento) {
+        this.nacimiento= nacimiento;
+    }
+    public void setPeso (HashMap <LocalDate, Double>peso) {
+        this.peso=peso;
+    }
+    public void setAltura (HashMap <LocalDate, Double>altura) {
+        this.altura=altura;
+    }
+    
+    public String fechaPartic (LocalDate fecha) {
+        if (peso.containsKey(fecha) && alturas.containsKey(fecha)) {
+            double p= peso.get(fecha);
+            double a= altura.get(fecha);
+            return "Peso: "+ p +" - Altura: "+ a;
+        }
+        else {
+            return "no hay registros para esos datos";
+        }
+    }
+    
+    public Double promedioAnio () {
+        for (Map.Entry<LocalDate, Double>entrada: peso.entrySeT()){
+    }
+    
+    
+    
+    public double porcentajeAltura (LocalDate fecha1, LocalDate fecha2) {
+        double resultado= 0;
+        double alturas= 0;
+        
+        
+    }
