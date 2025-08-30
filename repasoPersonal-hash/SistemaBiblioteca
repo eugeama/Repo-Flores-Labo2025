@@ -1,0 +1,31 @@
+
+
+public class Usuario {
+  private String nombre;
+  private int DNI;
+  private HashSet<String>libPrestados = new HashSet<>();
+}
+
+public class Biblioteca {
+    private HashMap<Integer, String> mapaUsuarios = new HashMap<>();
+    private HashMap<Integer,String>prestadosxUsuario = new HashMap<>();
+    private HashSet<String>disponibles = new HashSet<>();
+    
+    public void agregarUsu (Usuario u) {
+        mapaUsuarios.put(u.getDNI(), u.getNombre());
+        prestadosxUsuario.put(u.getDNI(), 0);
+    }
+    
+    public void prestarLibro (String libroNom){
+        if(disponibles.contains(libronom)) {
+            disponibles.remove(libronom);
+        }
+    
+    public void devolverLibro (String libroNom, int dni) {
+        int contador=prestadosxUsuario.get(dni);
+        disponibles.add(libroNom);
+        prestadosxUsuario.put(dni, contador - 1);
+    }    
+        
+    }
+} 
