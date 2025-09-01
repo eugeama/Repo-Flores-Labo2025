@@ -20,10 +20,11 @@ public class Familia {
     }
       public double promCalorias (){
         int calorias=0;
-        for (Map.Entry<Persona>entry: personas.entrySet()){
-            calorias=familia.getCalorias();
+        for (Persona p : personas){
+            calorias+=familia.getCalorias();
         }
         return calorias/familias.size();
     }
 }
+
 
