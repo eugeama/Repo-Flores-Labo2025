@@ -4,6 +4,7 @@ public class BeneficioTrago extends Beneficio {
     private ArrayList<String> tragos;
     public BeneficioTrago(String nombre, String creador, String desc, ArrayList<String> Trago) {
         super(nombre, creador, desc, false);
+        this.tragos = new ArrayList<>();
     }
 
     public ArrayList<String> getTragos() {
