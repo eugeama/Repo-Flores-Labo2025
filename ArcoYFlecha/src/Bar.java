@@ -3,11 +3,11 @@ import java.util.HashSet;
 
 public class Bar {
     private String nombre;
-    private ArrayList<Diana> dianas;
+    private ArrayList<Diana> dianas = new ArrayList<>();
     private int cantClientes;
     private double dineroRecaudado;
-    private HashSet<Beneficio> beneficios;
-    private HashSet<Beneficio>benefAcum;
+    private HashSet<Beneficio> beneficios = new HashSet<>();
+    private HashSet<Beneficio> benefAcum = new HashSet<>();
 
     public Bar(String nombre, ArrayList<Diana> dianas, int cantClientes, double dineroRecaudado,
                HashSet<Beneficio> beneficios, HashSet<Beneficio>benefAcum) {
