@@ -8,6 +8,7 @@ public abstract class Diana {
     public Diana(String nombre, int nivelDificultad, HashMap<String, Integer>puntaje) {
         this.nombre=nombre;
         this.nivelDificultad=nivelDificultad;
+        this.puntaje = puntaje;
     }
 
     public String getNombre() {
