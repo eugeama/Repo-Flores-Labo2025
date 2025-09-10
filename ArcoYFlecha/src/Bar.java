@@ -7,7 +7,7 @@ public class Bar {
     private int cantClientes;
     private double dineroRecaudado;
     private HashSet<Beneficio> beneficios = new HashSet<>();
-    private HashSet<Beneficio> benefAcum = new HashSet<>();
+    private HashSet<BeneficioAcum> benefAcum = new HashSet<>();
 
     public Bar(String nombre, ArrayList<Diana> dianas, int cantClientes, double dineroRecaudado,
                HashSet<Beneficio> beneficios, HashSet<Beneficio>benefAcum) {
