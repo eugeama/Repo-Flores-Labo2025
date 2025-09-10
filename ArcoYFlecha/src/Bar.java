@@ -3,11 +3,11 @@ import java.util.HashSet;
 
 public class Bar {
     private String nombre;
-    private ArrayList<Diana> dianas = new ArrayList<>();
+    private ArrayList<Diana> dianas;
     private int cantClientes;
     private double dineroRecaudado;
-    private HashSet<Beneficio> beneficios = new HashSet<>();
-    private HashSet<BenefAcumulable> benefAcum = new HashSet<>();
+    private HashSet<Beneficio> beneficios;
+    private HashSet<BenefAcumulable> benefAcum;
 
     public Bar(String nombre, ArrayList<Diana> dianas, int cantClientes, double dineroRecaudado,
                HashSet<Beneficio> beneficios, HashSet<Beneficio>benefAcum) {
@@ -82,7 +82,7 @@ public class Bar {
         dineroRecaudado +=pago;
     }
 
-    public int cantNoAcumulables(){ //2
+    public int cantNoAcumulables(){ //2 (usar .suze en lugar de instanceof)
         int contador=0;
         for(Beneficio b: beneficios){
             if(!(b instanceof BenefAcumulable)) {
