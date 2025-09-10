@@ -82,7 +82,7 @@ public class Bar {
         dineroRecaudado +=pago;
     }
 
-    public int cantNoAcumulables(){ //2 (usar .suze en lugar de instanceof)
+    public int cantNoAcumulables(){ //2 (usar .size en lugar de instanceof)
         int contador=0;
         for(Beneficio b: beneficios){
             if(!(b instanceof BenefAcumulable)) {
