@@ -35,12 +35,7 @@ public class SistemaTratamiento {
     }
 
     public int contarNoAplican() {
-        int count = 0;
-        for (Paciente p : pacientes) {
-            if (p instanceof Adulto || p instanceof Gerente)
-                    count++;
-        }
-        return count;
+       return pacientes.size()- enTratamiento.size();
     }
 
     public void mostrarDiasTratamiento() {
@@ -50,3 +45,4 @@ public class SistemaTratamiento {
         }
     }
 }
+
