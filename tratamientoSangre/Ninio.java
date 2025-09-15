@@ -25,7 +25,7 @@ public class Ninio extends Paciente implements Tratamiento {
 
     @Override
     public boolean puedeSolicitarTratamiento() {
-        return edad > 3;
+        return true;
     }
 
     @Override
@@ -33,3 +33,4 @@ public class Ninio extends Paciente implements Tratamiento {
         return nivelTolerancia * 450000.0;
     }
 }
+
