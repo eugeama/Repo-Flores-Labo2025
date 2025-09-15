@@ -28,12 +28,6 @@ public class Joven extends Paciente implements Tratamiento {
     }
 
     @Override
-    public boolean puedeSolicitarTratamiento() {
-        int aniosRestantes = EDAD_MAX - edad;
-        return !(actividades.size() % 2 != 0 && aniosRestantes <= 2);
-    }
-
-    @Override
     public double calcularCostoTratamiento() {
         int anio = getNacimiento().getYear();
         int mes = getNacimiento().getMonthValue();
@@ -47,3 +41,4 @@ public class Joven extends Paciente implements Tratamiento {
         }
     }
 }
+
