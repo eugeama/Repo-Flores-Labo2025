@@ -1,3 +1,5 @@
+package MasterChef;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.text.Normalizer;

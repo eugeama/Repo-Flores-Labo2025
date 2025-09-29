@@ -55,6 +55,6 @@ public class Intermedios extends Participante {
             throw new Exception("El intermedio solo puede servir principales");
         }
 
-        System.out.println("El intermedio sirvió el plato principal: " + plato.getNombre());
+        System.out.println("El intermedio sirvio el plato principal: " + plato.getNombre());
     }
 }

@@ -5,11 +5,10 @@ import java.time.LocalTime;
 
 public class Expertos extends Participante {
     private static LocalTime tiempoDePreparacion = LocalTime.of(1, 20);
-    private LocalTime tiempoActual = LocalTime.of(1, 20);
+    private LocalTime tiempoActual;
 
     public Expertos(LocalTime tiempoActual, String localidad, Colores color, String nombre, String apellido, int dni, LocalDate nacimiento) {
         super(localidad, color, nombre, apellido, dni, nacimiento);
-        //tiempo de preparacion ya asignado
         this.tiempoActual = tiempoActual;
     }
 
@@ -35,7 +34,7 @@ public class Expertos extends Participante {
 
     @Override
     public void cocinarPlato(Plato plato) throws Exception {
-        int tiempoPlato = plato.getTiempoPreparacion(); // en minutos
+        int tiempoPlato = plato.getTiempoPreparacion();
         int tiempoRestante = tiempoActual.getHour() * 60 + tiempoActual.getMinute();
 
         if (tiempoPlato > tiempoRestante) {
@@ -45,12 +44,12 @@ public class Expertos extends Participante {
         int minutosRestantes = tiempoRestante - tiempoPlato;
         tiempoActual = LocalTime.of(minutosRestantes / 60, minutosRestantes % 60);
 
-        System.out.println("El experto cocinó el plato: " + plato.getNombre() + ". Tiempo restante: "
+        System.out.println("El experto cocino el plato: " + plato.getNombre() + ". Tiempo restante: "
                 + tiempoActual.getHour() + ":" + tiempoActual.getMinute());
     }
 
     @Override
-    public void servirPlato(Plato plato) { //sin excepcion
-        System.out.println("El experto sirvió el plato: " + plato.getNombre());
+    public void servirPlato(Plato plato) {
+        System.out.println("El experto sirvio el plato: " + plato.getNombre());
     }
 }

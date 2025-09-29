@@ -1,6 +1,4 @@
 package MasterChef;
-
-import tratamientoSangre.Persona;
 import java.time.LocalDate;
 
 public abstract class Participante extends Persona {
